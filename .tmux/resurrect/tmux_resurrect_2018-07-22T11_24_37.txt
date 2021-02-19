@@ -1,0 +1,3 @@
+pane	0	0	:zsh	1	:*	0	:/home/truongdle	1	zsh	:
+window	0	0	1	:*	c2dd,81x47,0,0,0
+state	0	

@@ -1,0 +1,22 @@
+*------------ibus-bogo---------------*
+*------------Xmodmap---------------*
+keycode 62 = Return
+keycode 104 = Return
+keycode 83 = Left
+keycode 85 = Right
+keycode 80 = Up
+keycode 84 = Down
+*------------tmux---------------*
+tmux source-file ~/.tmux.conf
+
+bind -n S-Left  previous-window
+bind -n S-Right next-window
+
+
+*------------ibus-bogo---------------*
+*------------ibus-bogo---------------*
+*------------ibus-bogo---------------*
+*------------ibus-bogo---------------*
+*------------ibus-bogo---------------*
+*------------ibus-bogo---------------*
+

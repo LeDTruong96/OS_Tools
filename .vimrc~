@@ -1,0 +1,38 @@
+"Turn on backup option
+set backup
+
+"Where to store backups
+set backupdir=~/Downloads/UbuntuBackup
+
+"Make backup before overwriting the current buffer
+"set writebackup
+
+"Overwrite the original backup file
+set backupcopy=yes
+
+set hlsearch
+set ignorecase
+set smartcase
+set number
+
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
+nnoremap <C-x> :bd<CR>
+nnoremap <C-z> :bd!<CR>
+
+nnoremap <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+call plug#begin('~/.vim/plugged')
+Plug 'ap/vim-buftabline'
+Plug 'ervandew/supertab'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-vinegar'
+call plug#end()
+
+
