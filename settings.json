@@ -1,0 +1,137 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#00BCD4",
+        "activityBar.activeBorder": "#00BCD4",
+        "list.activeSelectionForeground": "#00BCD4",
+        "list.inactiveSelectionForeground": "#00BCD4",
+        "list.highlightForeground": "#00BCD4",
+        "scrollbarSlider.activeBackground": "#00BCD450",
+        "editorSuggestWidget.highlightForeground": "#00BCD4",
+        "textLink.foreground": "#00BCD4",
+        "progressBar.background": "#00BCD4",
+        "pickerGroup.foreground": "#00BCD4",
+        "tab.activeBorder": "#00BCD4",
+        "notificationLink.foreground": "#00BCD4",
+        "editorWidget.resizeBorder": "#00BCD4",
+        "editorWidget.border": "#00BCD4",
+        "settings.modifiedItemIndicator": "#00BCD4",
+        "settings.headerForeground": "#00BCD4",
+        "panelTitle.activeBorder": "#00BCD4",
+        "breadcrumb.activeSelectionForeground": "#00BCD4",
+        "menu.selectionForeground": "#00BCD4",
+        "menubar.selectionForeground": "#00BCD4",
+        "editor.findMatchBorder": "#00BCD4",
+        "selection.background": "#00BCD440",
+        "statusBarItem.remoteBackground": "#00BCD4"
+    },
+    "materialTheme.accent": "Cyan",
+    "color-highlight.markerType": "dot-after",
+    "[javascript]": {
+        "editor.defaultFormatter": "remimarsal.prettier-now"
+    },
+    "files.associations": {
+        "*.css": "scss",
+        "*.js": "javascriptreact"
+    },
+    "html.format.wrapLineLength": 150,
+    "prettier.javascriptEnable": [
+        "javascript",
+        "javascriptreact"
+    ],
+    "prettier.printWidth": 100,
+    "prettier.cssEnable": [
+        "css",
+        "less",
+        "scss",
+        "postcss"
+    ],
+    "prettier.jsonEnable": [
+        "json"
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.formatOnSave": true,
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "explorer.confirmDelete": false,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "remimarsal.prettier-now"
+    },
+    "powermode.comboThreshold": 2,
+    "powermode.enabled": true,
+    "powermode.explosionOffset": 0.7,
+    "powermode.explosionSize": 3,
+    "powermode.shakeIntensity": 1,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "emmet.showSuggestionsAsSnippets": true,
+    "powermode.presets": "flames",
+    "[ahk]": {
+        "editor.defaultFormatter": "cweijan.vscode-autohotkey-plus"
+    },
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Dracula",
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["J"],
+            "after": ["5", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5", "k"]
+        },
+        {
+            "before": ["<Leader>","j"],
+            "after": ["J"]
+        },
+        {
+            "before": ["<C-h>"],
+            "after": ["<C-w>", "h"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-w>", "j"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-w>", "k"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["<C-w>", "l"]
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": [". Leader>", "/"],
+            "commands": [":noh"]
+        },
+        {
+            "before": ["<Leader>", "p"],
+            "commands": ["workbench.action.showCommands"]
+        },
+        {
+            "before": ["<Leader>", "t"],
+            "commands": ["workbench.action.gotoSymbol"]
+        },
+    ], 
+    "powermode.enableShake": false,
+    "powermode.enableStatusBarComboCounter": false,
+    "powermode.enableStatusBarComboTimer": false,
+    "vim.leader": "<Space>",
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "vim.smartRelativeLine": true,
+    "vim.hlsearch": true
+}
