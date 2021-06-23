@@ -1,31 +1,142 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBarBadge.background": "#00BCD4",
-        "activityBar.activeBorder": "#00BCD4",
-        "list.activeSelectionForeground": "#00BCD4",
-        "list.inactiveSelectionForeground": "#00BCD4",
-        "list.highlightForeground": "#00BCD4",
-        "scrollbarSlider.activeBackground": "#00BCD450",
-        "editorSuggestWidget.highlightForeground": "#00BCD4",
-        "textLink.foreground": "#00BCD4",
-        "progressBar.background": "#00BCD4",
-        "pickerGroup.foreground": "#00BCD4",
-        "tab.activeBorder": "#00BCD4",
-        "notificationLink.foreground": "#00BCD4",
-        "editorWidget.resizeBorder": "#00BCD4",
-        "editorWidget.border": "#00BCD4",
-        "settings.modifiedItemIndicator": "#00BCD4",
-        "settings.headerForeground": "#00BCD4",
-        "panelTitle.activeBorder": "#00BCD4",
-        "breadcrumb.activeSelectionForeground": "#00BCD4",
-        "menu.selectionForeground": "#00BCD4",
-        "menubar.selectionForeground": "#00BCD4",
-        "editor.findMatchBorder": "#00BCD4",
-        "selection.background": "#00BCD440",
-        "statusBarItem.remoteBackground": "#00BCD4"
-    },
-    "materialTheme.accent": "Cyan",
-    "color-highlight.markerType": "dot-after",
+    "vim.insertModeKeyBindingsNonRecursive": [
+        { "before": ["j", "j"], "after": ["<Esc>"] },
+        { "before": ["J", "J"], "after": ["<Esc>"] },
+        { "before": ["k", "k"], "after": ["<Esc>"] },
+        { "before": ["K", "K"], "after": ["<Esc>"] },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        //Editor action
+        { "before": ["u"], "commands": ["undo"] },
+        { "before": ["U"], "commands": ["redo"] },
+        { "before": ["s", "y"], "after": ["y", "y", "p"] },
+        { "before": ["s", "J"], "after": ["J"] },
+        { "before": ["s", "v"], "after": ["."] },
+        { "before": ["s", "q"], "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"] },
+        { "before": ["s", "r"], "commands": ["revealInExplorer"] },
+        { "before": ["s", "w"], "commands": ["workbench.action.closeActiveEditor"] },
+        { "before": ["s", "W"], "commands": ["workbench.action.closeOtherEditors"] },
+        { "before": ["s", "z"], "commands": ["workbench.action.toggleEditorWidths"] },
+        { "before": ["s", "m"], "commands": ["workbench.action.moveEditorToRightGroup"] },
+        { "before": ["s", "n"], "commands": ["workbench.action.moveEditorToLeftGroup"] },
+        { "before": ["s", "k"], "commands": ["workbench.action.focusNextGroup"] },
+
+        //Movement
+        { "before": ["J"], "after": ["5", "j"] },
+        { "before": ["K"], "after": ["5", "k"] },
+        { "before": ["H"], "after": ["<C-d>"] },
+        { "before": ["L"], "after": ["<C-u>"] },
+        { "before": ["f"], "after": ["<Leader>", "<Leader>", "f"] },
+        { "before": ["F"], "after": ["<Leader>", "<Leader>", "F"] },
+        { "before": ["s", "d"], "after": ["v", "<Leader>", "<Leader>", "s"] },
+        { "before": ["s", "o"], "after": ["<C-o>"] },
+        { "before": ["s", "i"], "after": ["<C-i>"] },
+        { "before": ["s", "h"], "commands": ["editor.action.jumpToBracket"] },
+        { "before": ["s", "e"], "after": ["$"] },
+        { "before": ["s", "a"], "after": ["_"] },
+        { "before": ["s", "c"], "commands": ["editor.action.marker.next"] },
+
+        //Utilities
+        { "before": ["s", "u", "f"], "commands": ["explorer.newFile"] },
+        { "before": ["s", "u", "F"], "commands": ["explorer.newFolder"] },
+        { "before": ["s", "u", "s"], "commands": ["workbench.action.openSettingsJson"] },
+        { "before": ["s", "/"], "commands": [":noh"] },
+        { "before": ["s", "s"], "commands": ["workbench.action.toggleZenMode"] },
+        { "before": ["s", "x"], "commands": ["workbench.action.files.save"] },
+        { "before": ["g", "p"], "commands": ["editor.action.peekDefinition"] },
+        { "before": ["g", "l"], "commands": ["editor.action.openLink"] },
+
+        // Cleaning
+        { "before": ["g", "f"], "commands": [":noh"] },
+        { "before": ["g", "o"], "commands": ["workbench.debug.panel.action.clearReplAction", "workbench.action.focusActiveEditorGroup"] },
+        { "before": ["g", "n"], "commands": ["notifications.clearAll"] },
+
+        // Folding
+        { "before": ["s", "f", "f"], "after": ["z" ,"C"] },
+        { "before": ["s", "f", "u"], "after": ["z" ,"o"] },
+        { "before": ["s", "f", "a"], "after": ["z" ,"O"] },
+        { "before": ["s", "f", "t"], "after": ["z" ,"a"] },
+
+        // Visual Select Block
+        { "before": ["S", "v"], "after": ["<C-v>"] },
+        { "before": ["S", "n"], "after": ["v", "i", "\""] },
+        { "before": ["S", "m"], "after": ["v", "i", "'"] },
+        { "before": ["S", "b"], "after": ["v", "i", "`"] },
+        { "before": ["S", "h"], "after": ["v", "i", "{"] },
+        { "before": ["S", "j"], "after": ["v", "i", "("] },
+        { "before": ["S", "k"], "after": ["v", "i", "["]},
+        { "before": ["S", "l"], "after": ["v", "i", "'"] },
+        { "before": ["S", "d"], "after": ["v", "$", "h", "h"] },
+        { "before": ["S", "F"], "after": ["v", "i", "W", "$", "%"] }, 
+        { "before": ["S", "f"], "after": ["v", "i", "W", "$", "%", "l"] }, 
+        { "before": ["S", "g"], "after": ["g", "v"] }, 
+
+        //Book mark
+        { "before": ["M"], "commands": ["bookmarks.toggle"] },
+        { "before": ["m", "m"], "commands": ["bookmarks.listFromAllFiles"] },
+        { "before": ["m", "l"], "commands": ["bookmarks.toggleLabeled"] },
+        { "before": ["m", "n"], "commands": ["bookmarks.jumpToNext"] },
+        { "before": ["m", "p"], "commands": ["bookmarks.jumpToPrevious"] },
+        { "before": ["m", "s"], "commands": ["workbench.view.extension.bookmarks"] },
+        { "before": ["m", "c", "a"], "commands": ["bookmarks.clearFromAllFiles"] },
+
+        //Flutter
+        { "before": ["<Leader>", "0"], "commands": ["workbench.action.debug.start"] },
+        { "before": ["<Leader>", "9"], "commands": ["dart.openDevToolsInspector"] },
+        { "before": ["<Leader>", "1"], "commands": ["flutter.hotRestart"] },
+        { "before": ["<Leader>", "2"], "commands": ["flutter.hotReload"] },
+        { "before": ["<Leader>", "3"], "commands": ["flutter.toggleDebugPainting"] },
+        { "before": ["<Leader>", "r"], "commands": ["editor.action.refactor"] },
+        { "before": ["<Leader>", "f"], "commands": ["editor.action.quickFix"] },
+
+        //HTML
+        { "before": ["c", "u"], "commands": ["editor.emmet.action.updateTag"] },
+        { "before": ["s", "g"], "commands": ["editor.emmet.action.matchTag"] },
+        { "before": ["S", "t"], "after": ["v", "i", "t"] },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Movement
+        { "before": ["J"], "after": ["5", "j"] },
+        { "before": ["K"], "after": ["5", "k"] },
+        { "before": ["s", "d"], "after": ["<Leader>", "<Leader>", "s"] },
+        { "before": ["f"], "after": ["<Leader>", "<Leader>", "f"] },
+        { "before": ["F"], "after": ["<Leader>", "<Leader>", "F"] },
+        { "before": ["s", "a"], "after": ["_"] },
+        { "before": ["s", "e"], "after": ["$", "h"] },
+        { "before": ["s", "h"], "after": ["%"] },
+        { "before": ["s", "k"], "commands": ["workbench.action.focusNextGroup"] },
+
+        // Surrounding
+        { "before": ["S", "n"], "after": ["S", "\""] },
+        { "before": ["S", "m"], "after": ["S", "'"] },
+        { "before": ["S", "b"], "after": ["S", "`"] },
+        { "before": ["S", "h"], "after": ["S", "{"] },
+        { "before": ["S", "j"], "after": ["S", "("] },
+        { "before": ["S", "k"], "after": ["S", "["]},
+        { "before": ["S", "l"], "after": ["S", "'"] },
+
+        // Utilities
+        { "before": ["s", "s"], "commands": ["workbench.action.toggleZenMode"] },
+        { "before": ["s", "f"], "after": ["y", "/", "C-v", "<Enter>"] },
+        { "before": ["s", "F"], "commands": ["search.action.openEditor"] },
+        { "before": ["s", "r"], "after": ["y", ":", "%", "s","/", "C-v", "/", "/", "g", "c", "<left>", "<left>", "<left>"] },
+        { "before": ["y"], "after": ["y", "`", ">"] },
+
+        // Visual select block
+        { "before": ["\""], "after": ["i", "\""] },
+        { "before": ["'"], "after": ["i", "'"] },
+        { "before": ["{"], "after": ["i", "{"] },
+        { "before": ["["], "after": ["i", "["] },
+        { "before": ["("], "after": ["i", "("] },
+        { "before": ["<"], "after": ["i", "<"] }, 
+        { "before": ["`"], "after": ["i", "`"] }, 
+        { "before": ["a"], "after": ["a", "f"] },
+        { "before": ["A"], "after": ["g", "e", "o", "w", "o"] },
+        { "before": ["S", "e"], "after": ["o", "b", "o"] }, 
+
+        // HTML
+        { "before": ["t"], "after": ["i", "t"] },
+    ],
     "[javascript]": {
         "editor.defaultFormatter": "remimarsal.prettier-now"
     },
@@ -33,36 +144,20 @@
         "*.css": "scss",
         "*.js": "javascriptreact"
     },
-    "html.format.wrapLineLength": 150,
-    "prettier.javascriptEnable": [
-        "javascript",
-        "javascriptreact"
-    ],
-    "prettier.printWidth": 100,
-    "prettier.cssEnable": [
-        "css",
-        "less",
-        "scss",
-        "postcss"
-    ],
-    "prettier.jsonEnable": [
-        "json"
-    ],
+    "prettier.javascriptEnable": ["javascript", "javascriptreact"],
+    "prettier.printWidth": 150,
+    "prettier.cssEnable": ["css", "less", "scss", "postcss"],
+    "prettier.jsonEnable": ["json"],
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "editor.formatOnSave": true,
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
-    },
     "explorer.confirmDelete": false,
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     "[javascriptreact]": {
         "editor.defaultFormatter": "remimarsal.prettier-now"
     },
     "powermode.comboThreshold": 2,
-    "powermode.enabled": true,
     "powermode.explosionOffset": 0.7,
     "powermode.explosionSize": 3,
     "powermode.shakeIntensity": 1,
@@ -72,66 +167,49 @@
     "[ahk]": {
         "editor.defaultFormatter": "cweijan.vscode-autohotkey-plus"
     },
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Dracula",
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["J"],
-            "after": ["5", "j"]
-        },
-        {
-            "before": ["K"],
-            "after": ["5", "k"]
-        },
-        {
-            "before": ["<Leader>","j"],
-            "after": ["J"]
-        },
-        {
-            "before": ["<C-h>"],
-            "after": ["<C-w>", "h"]
-        },
-        {
-            "before": ["<C-j>"],
-            "after": ["<C-w>", "j"]
-        },
-        {
-            "before": ["<C-k>"],
-            "after": ["<C-w>", "k"]
-        },
-        {
-            "before": ["<C-l>"],
-            "after": ["<C-w>", "l"]
-        },
-        {
-            "before": ["leader", "w"],
-            "commands": ["workbench.action.files.save"]
-        },
-        {
-            "before": [". Leader>", "/"],
-            "commands": [":noh"]
-        },
-        {
-            "before": ["<Leader>", "p"],
-            "commands": ["workbench.action.showCommands"]
-        },
-        {
-            "before": ["<Leader>", "t"],
-            "commands": ["workbench.action.gotoSymbol"]
-        },
-    ], 
-    "powermode.enableShake": false,
-    "powermode.enableStatusBarComboCounter": false,
     "powermode.enableStatusBarComboTimer": false,
     "vim.leader": "<Space>",
-    "vim.sneak": true,
     "vim.easymotion": true,
     "vim.smartRelativeLine": true,
-    "vim.hlsearch": true
+    "vim.hlsearch": true,
+    "prettier.tabWidth": 4,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.commandsToSkipShell": ["workbench.action.focusNextGroup"],
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.enablePersistentSessions": false,
+    "update.mode": "manual",
+    "vim.easymotionKeys": "jksdluiwemxcrfvyhnqaztgbop1234567890",
+    "[jsonc]": {
+        "editor.defaultFormatter": "remimarsal.prettier-now"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.wordWrapColumn": 150,
+    "problems.autoReveal": false,
+    "editor.rulers": [
+        150
+    ],
+    "editor.wordWrap": "off",
+    "vim.sneak": true,
+    "vim.useSystemClipboard": true,
+    "html.format.wrapLineLength": 0,
+    "vim.foldfix": true,
+    "editor.foldingHighlight": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "[dart]": {
+        "editor.defaultFormatter": "Dart-Code.dart-code"
+    },
+    "editor.cursorSurroundingLines": 10,
+    "editor.smoothScrolling": true,
+    "window.zoomLevel": 1,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.silentNotifications": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.centerLayout": false,
+    "window.title": "¯\\_(ツ)_/¯ ${activeEditorShort}${separator}${rootName}",
+    "zenMode.hideTabs": false,
+    "dart.previewFlutterUiGuides": true,
+    "workbench.colorTheme": "Gruvbox Dark Hard",
 }
