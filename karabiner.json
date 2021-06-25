@@ -814,10 +814,13 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "j",
+                                        "key_code": "k",
                                         "modifiers": [
-                                            "left_command"
+                                            "left_control"
                                         ]
+                                    },
+                                    {
+                                        "key_code": "z"
                                     }
                                 ],
                                 "type": "basic"
