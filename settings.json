@@ -1,6 +1,9 @@
 {
     "vim.insertModeKeyBindingsNonRecursive": [
         { "before": ["j", "j"], "after": ["<Esc>"] },
+        { "before": ["J", "J"], "after": ["<Esc>"] },
+        { "before": ["k", "k"], "after": ["<Esc>"] },
+        { "before": ["K", "K"], "after": ["<Esc>"] },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         //Editor action
@@ -72,8 +75,8 @@
         { "before": ["M"], "commands": ["bookmarks.toggle"] },
         { "before": ["m", "m"], "commands": ["bookmarks.listFromAllFiles"] },
         { "before": ["m", "l"], "commands": ["bookmarks.toggleLabeled"] },
-        { "before": ["m", "n"], "commands": ["bookmarks.jumpToNext"] },
-        { "before": ["m", "p"], "commands": ["bookmarks.jumpToPrevious"] },
+        { "before": ["<tab>"], "commands": ["bookmarks.jumpToNext"] },
+        { "before": ["<S-tab>"], "commands": ["bookmarks.jumpToPrevious"] },
         { "before": ["m", "s"], "commands": ["workbench.view.extension.bookmarks"] },
         { "before": ["m", "c", "a"], "commands": ["bookmarks.clearFromAllFiles"] },
 
@@ -85,6 +88,7 @@
         { "before": ["<Leader>", "3"], "commands": ["flutter.toggleDebugPainting"] },
         { "before": ["<Leader>", "r"], "commands": ["editor.action.refactor"] },
         { "before": ["<Leader>", "f"], "commands": ["editor.action.quickFix"] },
+        { "before": ["<Leader>", "q"], "after": ["<C-R>"] },
 
         //HTML
         { "before": ["c", "u"], "commands": ["editor.emmet.action.updateTag"] },
@@ -209,4 +213,5 @@
     "zenMode.hideTabs": false,
     "dart.previewFlutterUiGuides": true,
     "workbench.colorTheme": "Gruvbox Dark Hard",
+    "dart.lineLength": 120,
 }
