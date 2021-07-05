@@ -1678,7 +1678,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.microsoft\\.VSCode$"
+                                            "^com\\.microsoft\\.VSCode$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1752,6 +1753,46 @@
                                             "left_control",
                                             "left_option"
                                         ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "caps_lock pressed",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "caps_lock pressed",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
                                     }
                                 ],
                                 "type": "basic"

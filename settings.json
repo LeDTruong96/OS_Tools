@@ -65,7 +65,6 @@
         { "before": ["S", "h"], "after": ["v", "i", "{"] },
         { "before": ["S", "j"], "after": ["v", "i", "("] },
         { "before": ["S", "k"], "after": ["v", "i", "["]},
-        { "before": ["S", "l"], "after": ["v", "i", "'"] },
         { "before": ["S", "d"], "after": ["v", "$", "h", "h"] },
         { "before": ["S", "F"], "after": ["v", "i", "W", "$", "%"] }, 
         { "before": ["S", "f"], "after": ["v", "i", "W", "$", "%", "l"] }, 
@@ -179,7 +178,7 @@
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.enablePersistentSessions": false,
     "update.mode": "manual",
-    "vim.easymotionKeys": "jksdluiwemxcrfvyhnqaztgbop1234567890",
+    "vim.easymotionKeys": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "[jsonc]": {
         "editor.defaultFormatter": "remimarsal.prettier-now"
     },
@@ -214,4 +213,7 @@
     "dart.previewFlutterUiGuides": true,
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "dart.lineLength": 120,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
+    "vscode-neovim.useCtrlKeysForInsertMode": false,
 }
