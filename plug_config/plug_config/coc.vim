@@ -20,3 +20,8 @@ function! s:show_documentation()
   endif
 endfunction
 
+
+" Coc-Explorer
+nnoremap sr :CocCommand explorer<CR>
+" nnoremap sb :NERDTreeToggle<CR>
+

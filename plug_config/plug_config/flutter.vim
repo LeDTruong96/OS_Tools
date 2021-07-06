@@ -1,7 +1,6 @@
 "Flutter
 let g:dart_format_on_save = 1
 
-
 let g:which_key_map.f = {
       \ 'name' : '+Flutter' ,
       \ 's' : [':CocCommand flutter.run'        , 'flutter.run'],

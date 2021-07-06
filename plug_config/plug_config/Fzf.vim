@@ -1,3 +1,3 @@
 "Fzf
 nnoremap sp :Files<CR>
-nnoremap sq :Windows<CR>
+nnoremap sq :BufferPick<CR>
