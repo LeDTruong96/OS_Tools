@@ -211,7 +211,7 @@
     "window.title": "¯\\_(ツ)_/¯ ${activeEditorShort}${separator}${rootName}",
     "zenMode.hideTabs": false,
     "dart.previewFlutterUiGuides": true,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Nord Deep",
     "dart.lineLength": 120,
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
