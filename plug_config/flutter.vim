@@ -1,18 +1,26 @@
-"Flutter
-let g:dart_format_on_save = 1
+ let g:dart_format_on_save = 1
 
+lua << EOF
+   require("flutter-tools").setup{
+     widget_guides = {
+       enabled = true,
+     },
+     dev_tools = {
+       autostart = true,
+       auto_open_browser = false
+     },
+   } -- use defaults
+EOF
 
-let g:which_key_map.f = {
-      \ 'name' : '+Flutter' ,
-      \ 's' : [':CocCommand flutter.run'        , 'flutter.run'],
-      \ 'd' : [':CocCommand flutter.devices'    , 'flutter.devices'],
-      \ 'u' : [':CocCommand flutter.upgrade'       , 'flutter.upgrades'],
-      \ 'c' : [':CocCommand flutter.create'    , 'flutter.create'],
-      \ 'a' : [':CocCommand flutter.attach'          , 'flutter.attach'],
-      \ 'p' : [':CocCommand flutter.pub.get'           , 'flutter.pub.get'],
-      \ 'e' : [':CocCommand flutter.emulators'        , 'flutter.emulators'],
-      \ 'g' : [':CocCommand flutter.gotoSuper'        , 'flutter.gotoSuper'],
-      \ 'r' : [':CocCommand flutter.lsp.restart'            , 'flutter.lsp.restart'],
-      \ 't' : [':CocCommand flutter.doctor'          , 'flutter.doctor'],
-      \ }
+ nmap <F5>  <cmd>Telescope flutter commands<cr>
+ nmap <F6>  <cmd>Telescope command_history theme=get_dropdown<cr>
+ nmap <leader>f  <cmd>Telescope lsp_code_actions theme=get_dropdown<cr>
 
+ " Jump to definition
+nnoremap gh <Cmd>lua vim.lsp.buf.hover()<CR>
+ " Jump to definition
+nnoremap gd <Cmd>lua vim.lsp.buf.definition()<CR>
+ " Open code actions using the default lsp UI, if you want to change this please see the plugins above
+nnoremap <leader>ca <Cmd>lua vim.lsp.buf.code_action()<CR>
+"  " Open code actions for the selected visual range
+xnoremap <leader>ca <Cmd>lua vim.lsp.buf.range_code_action()<CR>

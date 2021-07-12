@@ -3,17 +3,14 @@ nnoremap <Leader>ve :tabnew $MYVIMRC<CR>
 
 "Set leader key
 let g:mapleader="\<Space>"
-let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 "Tab auto completion
-inoremap <expr> <Tab> pumvisible() ? "\<down>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<up>" : "\<S-Tab>"
-inoremap <expr> <CR> pumvisible() ? "\<CR><Esc>" : "\<CR>"
+inoremap <expr> <Tab> pumvisible() ? "\<down><cr>" : "\<Tab>"
+inoremap <expr> <CR> pumvisible() ? "\<CR>" : "\<CR>"
 
 "Disable key when press alone
 nmap S <nop>
 nmap s <nop>
-
 
 "TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
@@ -46,10 +43,17 @@ noremap sy yyp
 noremap sa _
 noremap se $
 noremap sh %
-noremap sx :w<CR>:source $MYVIMRC<CR>
+noremap sx :w<CR>
+noremap sX :w<CR>:so $MYVIMRC<CR>
 noremap sw :BufferClose<CR>
 noremap sJ J 
 noremap y y`>
+
+"folding
+nnoremap sff zC
+nnoremap sfa zO
+nnoremap sfu zo
+nnoremap sft za
 
 "Selection visual
 noremap Sh vi{
@@ -60,12 +64,6 @@ noremap Sm vi'
 noremap Sg gv
 noremap Sd v$h
 noremap Sf viw$%
-
-"EasyMotion
-let g:EasyMotion_smartcase = 1
-map f <Plug>(easymotion-s)
-map F v<Plug>(easymotion-s)
-map sd <Plug>(easymotion-overwin-f2)
 
 "Marks
 noremap mm :Marks<CR>
