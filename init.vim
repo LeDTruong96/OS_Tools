@@ -10,10 +10,16 @@ source $HOME/.config/nvim/plug_config/TmuxNav.vim
 source $HOME/.config/nvim/plug_config/Fzf.vim
 source $HOME/.config/nvim/plug_config/FloatTerm.vim
 source $HOME/.config/nvim/plug_config/barbar.vim
-source $HOME/.config/nvim/plug_config/neovide.vim
 source $HOME/.config/nvim/plug_config/lf.vim
 source $HOME/.config/nvim/plug_config/telescope.vim
 source $HOME/.config/nvim/plug_config/indentLine.vim
 source $HOME/.config/nvim/plug_config/NERDTree.vim
 source $HOME/.config/nvim/plug_config/vim-multiple-cursors.vim
 source $HOME/.config/nvim/plug_config/lspsaga.vim
+source $HOME/.config/nvim/plug_config/auto-pairs.vim
+source $HOME/.config/nvim/plug_config/wildfire.vim
+
+
+" Reverse
+" source $HOME/.config/nvim/plug_config/neoscroll.vim
+" source $HOME/.config/nvim/plug_config/neovide.vim

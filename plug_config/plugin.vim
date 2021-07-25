@@ -8,7 +8,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'glepnir/lspsaga.nvim'
 
 "Utilities
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'tpope/vim-commentary'
 Plug 'ptzz/lf.vim'
@@ -29,6 +29,8 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'preservim/nerdtree'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'gcmt/wildfire.vim'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -39,5 +41,10 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'dracula/vim',
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
+
+"Reserve
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'karb94/neoscroll.nvim'
+
 
 call plug#end()
