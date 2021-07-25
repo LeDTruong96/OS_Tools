@@ -1680,7 +1680,8 @@
                                         "bundle_identifiers": [
                                             "^com\\.microsoft\\.VSCode$",
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.kethku\\.neovide$"
+                                            "^com\\.kethku\\.neovide$",
+                                            "^org\\.p0deje\\.Maccy$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1763,7 +1764,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.kethku\\.neovide$"
+                                            "^com\\.kethku\\.neovide$",
+                                            "^org\\.p0deje\\.Maccy$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
