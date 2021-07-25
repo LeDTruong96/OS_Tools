@@ -20,6 +20,8 @@ source $HOME/.config/nvim/plug_config/auto-pairs.vim
 source $HOME/.config/nvim/plug_config/wildfire.vim
 
 
-" Reverse
-" source $HOME/.config/nvim/plug_config/neoscroll.vim
-" source $HOME/.config/nvim/plug_config/neovide.vim
+
+if has('gui_running')
+  source $HOME/.config/nvim/plug_config/neovide.vim
+endif
+
